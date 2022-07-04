@@ -2,12 +2,13 @@
     --light: antiquewhite;
     --linklight: #efafaf;
     --lighterlight: #fed;
+    --slighter: #9af;
     --dark: #191628;
     --lessdark: #1f2937;
     font-family: 'Times New Roman', monospace;
     --headerheight: 55px;
-    --smalltext: 11px;
-    --midtext: 14px;
+    --smalltext: 12px;
+    --midtext: 18px;
     --hugetext: 32px;
     --halfscreen: 45vw;
 }
@@ -109,6 +110,7 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-size: var(--smalltext);
     width: 300px;
     height: 300px;
     background-color: var(--dark);
@@ -121,9 +123,49 @@ a {
 
 .item img {
     width: 100%;
-    height: 220px;
+    height: 250px;
     object-fit: cover;
-    object-position: 50% 35%;
+    object-position: 50% 15%;
+}
+
+.Quote {
+    background-color: var(--slighter);
+    padding: 10vw;
+}
+
+.quotetext, .author {
+    font-size: var(--midtext);
+    text-align: justify;
+}
+
+.author {
+    font-weight: 800;
+    position: absolute;
+    right: 0;
+}
+
+.author::before {
+    content: '─ '
+}
+
+#encourage {
+    width: 100vw;
+    background-color: var(--lessdark);
+    display: flex;
+    align-items: center;
+    color: var(--light)
+}
+
+#encourage div {
+    padding: 30px;
+    text-align: justify;
+}
+
+#encourage img {
+    height: 400px;
+    width: 200px;
+    object-fit: cover;
+    object-position: -45px;
 }
 
 @media screen and (max-width: 700px) and (min-width: 481px) {
@@ -138,8 +180,8 @@ a {
 
 @media screen and (max-width: 480px) {
     :root {
-        --smalltext: 8px;
-        --midtext: 12px;
+        --smalltext: 12px;
+        --midtext: 15px;
         --hugetext: 25px;
         --headerheight: 85px;
         --halfscreen: 80vw;
@@ -161,4 +203,14 @@ a {
         padding: 0;
     }
 
+    #encourage {
+        flex-direction: column;
+    }
+
+    #encourage img {
+        height: 200px;
+        width: 400px;
+        object-fit: cover;
+        object-position: 0;
+    }
 }
