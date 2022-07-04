@@ -1,11 +1,22 @@
 :root {
     --light: antiquewhite;
-    --dark: #1f2937;
+    --dark: #191628;
+    --lessdark: #1f2937;
     font-family: 'Times New Roman', monospace;
     --headerheight: 55px;
     --smalltext: 11px;
     --midtext: 14px;
     --hugetext: 32px;
+}
+
+*, ::before, ::after {
+    margin: 0;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
 #header {
@@ -32,15 +43,7 @@
 
 }
 
-h1 {
-    font-size: var(--hugetext);
-}
-
-a {
-    font-size: var(--midtext);
-}
-
-a, h1 {
+.links a {
     text-decoration: none;
     color: var(--light);
 }
@@ -57,8 +60,34 @@ a, h1 {
     gap: 25px;
 }
 
-.content {
+#content {
     margin-top: var(--headerheight);
+    width: 100vw;
+}
+
+#general {
+    background-color: var(--lessdark);
+    color: var(--light);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5vw;
+    width: 100vw;
+}
+
+.rightside {
+    padding: 25px;
+    text-align: justify;
+}
+
+.image {
+    height: 500px;
+    width: 45vw;
+}
+
+.rightside {
+    width: 45vw;
 }
 
 @media screen and (max-width: 700px) and (min-width: 481px) {
