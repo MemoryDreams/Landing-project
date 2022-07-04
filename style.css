@@ -1,5 +1,6 @@
 :root {
     --light: antiquewhite;
+    --linklight: #efafaf;
     --dark: #191628;
     --lessdark: #1f2937;
     font-family: 'Times New Roman', monospace;
@@ -7,6 +8,7 @@
     --smalltext: 11px;
     --midtext: 14px;
     --hugetext: 32px;
+    --halfscreen: 45vw;
 }
 
 *, ::before, ::after {
@@ -26,7 +28,7 @@ img {
     justify-content: space-between;
     align-items: center;
     padding: 5px;
-    position: absolute;
+    position: fixed;
     width: 100vw;
     left: 0;
     top: 0;
@@ -43,7 +45,7 @@ img {
 
 }
 
-.links a {
+a {
     text-decoration: none;
     color: var(--light);
 }
@@ -81,13 +83,17 @@ img {
     text-align: justify;
 }
 
-.image {
-    height: 500px;
-    width: 45vw;
+.rightside a {
+    color: var(--linklight)
 }
 
-.rightside {
-    width: 45vw;
+.image {
+    height: 400px;
+}
+
+.image, .rightside {
+    width: var(--halfscreen);
+    padding-right: 25px;
 }
 
 @media screen and (max-width: 700px) and (min-width: 481px) {
@@ -106,9 +112,23 @@ img {
         --midtext: 12px;
         --hugetext: 25px;
         --headerheight: 85px;
+        --halfscreen: 80vw;
     }
 
     #header {
         flex-direction: column;
     }
+
+    #general {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .image {
+        height: 200px;
+        margin: 20px 0 -35px 0;
+        padding: 0;
+    }
+
 }
