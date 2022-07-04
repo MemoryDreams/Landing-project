@@ -2,7 +2,7 @@
     --light: antiquewhite;
     --linklight: #efafaf;
     --lighterlight: #fed;
-    --slighter: #9af;
+    --slighter: #ddf;
     --dark: #191628;
     --lessdark: #1f2937;
     font-family: 'Times New Roman', monospace;
@@ -130,7 +130,7 @@ a {
 
 .Quote {
     background-color: var(--slighter);
-    padding: 10vw;
+    padding: 30px 40px;
 }
 
 .quotetext, .author {
@@ -141,7 +141,7 @@ a {
 .author {
     font-weight: 800;
     position: absolute;
-    right: 0;
+    right: 5px;
 }
 
 .author::before {
@@ -166,6 +166,19 @@ a {
     width: 200px;
     object-fit: cover;
     object-position: -45px;
+}
+
+#footer {
+    background-color: var(--dark);
+    color: var(--slighter);
+    display: flex;
+    justify-content: space-between;
+    font-size: var(--smalltext);
+    padding: 5px;
+}
+
+#footer a {
+    padding: 3px;
 }
 
 @media screen and (max-width: 700px) and (min-width: 481px) {
